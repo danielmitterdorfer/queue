@@ -11,6 +11,7 @@ func BenchmarkQueue(b *testing.B) {
 		"lock-free queue":   NewLKQueue[int](),
 		"two-lock queue":    NewCQueue[int](),
 		"slice-based queue": NewSliceQueue[int](0),
+                "null queue": NewNullQueue[int](0),
 	}
 
 	length := 1 << 12
